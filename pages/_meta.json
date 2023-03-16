@@ -8,7 +8,13 @@
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://twitter.com/weiz_eth",
+    "newWindow": true
+  },
+  "wobbl3.io": {
+    "title": "wobbl3.io ↗",
+    "type": "page",
+    "href": "https://wobbl3.io",
     "newWindow": true
   }
 }
