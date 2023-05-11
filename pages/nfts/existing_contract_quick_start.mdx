@@ -1,0 +1,54 @@
+import { Callout } from 'nextra-theme-docs'
+
+# Existing Contract - Quick start
+
+This guide will help you get started with the Wobbl3 NFT smart contract integration using an existing NFT contract.
+
+## Prerequisites
+
+  * An ERC721-compatible NFT contract, deployed on a [supported blockchain](#which-blockchains-are-supported)
+
+## Step 1: Deploy the Wobbl3 NFT Referral Contract
+
+  1. Go to the [contract page on Third Web](https://thirdweb.com/)
+  2. Connect your wallet
+  3. Enter your mint function signature. For example, for the ThirdWeb ERC721 contract, the mint function signature is `mint(address to, uint256 tokenId)`
+  4. Click 'deploy'
+
+<Callout type="info" emoji="ℹ️">
+  Be sure to add an image to your ThirdWeb contract, as this will be used as the image for your referral page.
+</Callout>
+
+## Step 2: Go to the Mintboss Checkout page
+
+  1. You'll now be able to mint and send referrals through to the Mintboss Checkout Page for your deployed Wobbl3 Referral Contract. The URL format is as follows: `https://mintboss.xyz/checkout/<contract_address>?network=<network_name>&r=<referrer_address>`
+
+<Callout type="info" emoji="ℹ️">
+  **Tip:** If you're on mainnet, you can miss out the network parameter altogether.
+</Callout>
+
+<Callout emoji="✅">
+  You're all set! You can now start minting NFTs and sending referrals.
+</Callout>
+
+## FAQ
+
+### Which blockchains are supported?
+
+We currently support any EVM compatible blockchain. This includes Ethereum, Polygon, Binance Smart Chain, Fantom, Avalanche, and many more.
+
+### Which NFT standards are supported?
+
+We currently support the following NFT standards:
+
+    * ERC-721
+    * ERC-1155
+    * ERC-721A
+
+### How do I configure the credit card option
+
+More details will be posted soon.
+
+### How do I limit who can refer people?
+
+More details will be posted soon.
