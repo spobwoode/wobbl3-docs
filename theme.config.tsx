@@ -1,5 +1,5 @@
 import React from 'react'
-import { DocsThemeConfig } from "./themes/wobbl3-theme"
+import { DocsThemeConfig } from 'nextra-theme-docs'
 import { Fragment as Fragment12, jsx as jsx31, jsxs as jsxs21 } from "react/jsx-runtime";
 
 const config: DocsThemeConfig = {
@@ -10,12 +10,12 @@ const config: DocsThemeConfig = {
   },
   logo: <span>Wobbl3 Docs</span>,
   project: {
-    link: 'https://github.com/',
+    link: 'https://github.com/spobwoode/wobbl3-docs/',
   },
   chat: {
     link: 'https://discord.com',
   },
-  docsRepositoryBase: 'https://github.com/',
+  docsRepositoryBase: 'https://github.com/spobwoode/wobbl3-docs/tree/main/',
   footer: {
     text: 'Wobbl3 Docs',
   },
