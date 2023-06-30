@@ -1,14 +1,14 @@
 import type { ReactElement, ReactNode} from 'react';
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/router'
-import FlexSearch from 'flexsearch';
+import FlexSearch, { Document as FlexSearchDocument } from 'flexsearch';
 import cn from 'clsx'
 import { Search } from './search'
 import { HighlightMatches } from './highlight-matches'
 import { DEFAULT_LOCALE } from '../constants'
 import type { SearchResult } from '../types'
 
-type SectionIndex = FlexSearch.Document<
+type SectionIndex = FlexSearchDocument<
   {
     id: string
     url: string
@@ -20,7 +20,7 @@ type SectionIndex = FlexSearch.Document<
   ['title', 'content', 'url', 'display']
 >
 
-type PageIndex = FlexSearch.Document<
+type PageIndex = FlexSearchDocument<
   {
     id: number
     title: string
@@ -85,7 +85,7 @@ const loadIndexesImpl = async (
     }
   })
 
-  const sectionIndex: SectionIndex = new FlexSearch.Document({
+  const sectionIndex: SectionIndex = new FlexSearchDocument({
     cache: 100,
     tokenize: 'full',
     document: {
