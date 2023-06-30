@@ -1,6 +1,5 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
-import { Fragment as Fragment12, jsx as jsx31, jsxs as jsxs21 } from "react/jsx-runtime";
+import React, { Fragment } from 'react';
+import { DocsThemeConfig } from 'nextra-theme-docs';
 
 const config: DocsThemeConfig = {
   useNextSeoProps() {
@@ -19,42 +18,18 @@ const config: DocsThemeConfig = {
   footer: {
     text: 'Wobbl3 Docs',
   },
-  head: /* @__PURE__ */ jsxs21(Fragment12, {
-    children: [
-      /* @__PURE__ */ jsx31("meta", {
-      name: "msapplication-TileColor",
-      content: "#fff"
-    }),
-      /* @__PURE__ */ jsx31("meta", {
-      httpEquiv: "Content-Language",
-      content: "en"
-    }),
-      /* @__PURE__ */ jsx31("meta", {
-      name: "description",
-      content: "here"
-    }),
-      /* @__PURE__ */ jsx31("meta", {
-      name: "twitter:card",
-      content: "summary_large_image"
-    }),
-      /* @__PURE__ */ jsx31("meta", {
-      name: "twitter:site",
-      content: "@shuding_"
-    }),
-      /* @__PURE__ */ jsx31("meta", {
-      property: "og:title",
-      content: "hehr"
-    }),
-      /* @__PURE__ */ jsx31("meta", {
-      property: "og:description",
-      content: "here"
-    }),
-      /* @__PURE__ */ jsx31("meta", {
-      name: "apple-mobile-web-app-title",
-      content: "herh"
-    }),
-    ]
-  }),
+  head: (
+    <Fragment>
+      <meta name="msapplication-TileColor" content="#fff" />
+      <meta httpEquiv="Content-Language" content="en" />
+      <meta name="description" content="here" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@shuding_" />
+      <meta property="og:title" content="hehr" />
+      <meta property="og:description" content="here" />
+      <meta name="apple-mobile-web-app-title" content="herh" />
+    </Fragment>
+  ),
 }
 
-export default config
+export default config;
