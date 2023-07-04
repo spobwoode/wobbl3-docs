@@ -28,6 +28,7 @@ export function ERC20QuickStartProvider({ children }) {
 
     React.useEffect(() => {
         setUrl(`https://app.wobbl3.io/${tokenContractAddress}?r=${referrerWalletAddress}&chain=${chainName}`)
+        //setUrl(`http://localhost:3001/${tokenContractAddress}?r=${referrerWalletAddress}&chain=${chainName}`)
     }, [chainName])
 
     return (
