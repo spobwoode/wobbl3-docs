@@ -1,12 +1,42 @@
+import { Callout } from 'nextra/components'
+import { ERC20QuickStartProvider } from '../../components/contexts/ERC20QuickStartContext'
+import InputWalletAddress from '../../components/inputs/InputWalletAddress'
+import InputERC20ContractAddress from '../../components/inputs/InputERC20ContractAddress'
+import SelectChain from '../../components/inputs/SelectChain'
+import InputURL from '../../components/inputs/InputURL'
+
 # Quick start
 
-This guide will help you start using the Wobbl3 ERC20 affiliate protocol in your project. The affiliate protocol enables your community to earn rewards for referring new users to your project. The protocol will work with any ERC20 token that has a liquidity pool on the following exchanges:
+This guide will help you start using the Wobbl3 ERC20 affiliate protocol in your project. The affiliate protocol enables your community to earn rewards for referring new users to your project. 
 
-- Uniswap
-- Sushiswap
-- Balancer
-- 1inch
+<Callout type="error" emoji="️❗️">
+    Requirements: an ERC20 token with a liquidity pool on Uniswap. 
+</Callout>
 
-## 1. Generate a referral link
+## 1. Enter your payout wallet address
 
-To generate a referral link, you can go to your dashboard on Wobbl3.io and click on the "Generate a referral link" button. You will be prompted to enter the address of the token you want to use for the affiliate layer. You can also enter a custom referral code. If you leave the referral code empty, a random referral code will be generated for you.
+This is where your referral earnings will be sent. These will be sent to you for every successful trade completed using your referral link/code.
+
+<InputWalletAddress />
+
+## 2. Enter the ERC20 token address
+
+This is the token that will appear as the default selection when people go to buy.
+
+<InputERC20ContractAddress />
+
+## 3. Choose your chain
+
+<Callout type="info" emoji="ℹ️">
+    The affiliate protocol is currently only available on the **Ethereum** and **Polygon** mainnets. More blockchains are coming soon.
+</Callout>
+
+<SelectChain />
+
+## 4. Share your referral link/code
+
+Click below to copy your referral link to your clipboard. You can also embed the iframe code on your website/blog.
+
+<InputURL />
+
+export default ({ children }) => <ERC20QuickStartProvider>{children}</ERC20QuickStartProvider>
