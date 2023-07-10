@@ -22,12 +22,12 @@ const config: DocsThemeConfig = {
     <Fragment>
       <meta name="msapplication-TileColor" content="#fff" />
       <meta httpEquiv="Content-Language" content="en" />
-      <meta name="description" content="here" />
+      <meta name="description" content="%s – wobbl3 Docs" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@shuding_" />
-      <meta property="og:title" content="hehr" />
-      <meta property="og:description" content="here" />
-      <meta name="apple-mobile-web-app-title" content="herh" />
+      <meta property="og:title" content="%s – wobbl3 Docs" />
+      <meta property="og:description" content="%s – wobbl3 Docs" />
+      <meta name="apple-mobile-web-app-title" content="%s – wobbl3 Docs" />
     </Fragment>
   ),
 }
