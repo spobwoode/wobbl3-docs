@@ -1,0 +1,81 @@
+import { Callout } from 'nextra-theme-docs'
+
+# Unity - Quick start
+
+This is an example implementation of the Wobbl3 Protocol tracking for a Unity WebGL build. 
+In this example we're using Unity's [Application.absoluteURL](https://docs.unity3d.com/ScriptReference/Application-absoluteURL.html) to parse the URL of the document as shown in a browser's address bar.
+
+<Callout type="info" emoji="ℹ️">
+  The objective is to track the referrer's wallet address. For example, a user might click an affiliate link from Twitch in the following format: `https://YourGame.com/play?r=0x383fb35C0fEa02EA80a20F214861Cd20685f32C4`
+</Callout>
+
+## Step 1: Add the tracking script
+
+Here's a basic example of how the referrer wallet address can be retrieved from the URL:
+
+```csharp
+using UnityEngine;
+using System;
+
+public class URLManager : MonoBehaviour
+{
+    void Start()
+    {
+        string walletAddress = GetWalletAddressFromURL();
+
+        if (walletAddress != null)
+        {
+            Debug.Log("Wallet address is: " + walletAddress);
+            // Continue your processing with the wallet address
+        }
+        else
+        {
+            Debug.Log("No wallet address found in the URL.");
+        }
+    }
+
+    string GetWalletAddressFromURL()
+    {
+        Uri uri = new Uri(Application.absoluteURL);
+        var queryDictionary = HttpUtility.ParseQueryString(uri.Query);
+
+        return queryDictionary.Get("r");
+    }
+}
+```
+
+## Step 2: Send the transaction to the Wobbl3 Protocol smart contract
+
+If you've already set up your payment/mint function, you can simply replace your existing contract address with the Wobbl3 Protocol contract address and add the referrer wallet address as an additional parameter. Please contact us if you're not sure of your contract address.
+For example:
+```json
+{
+	"transactionRequest": {
+
+		"type": "CONTRACT_EXECUTION",
+		"walletId": "adc4c08a-b8fa-4e4c-z5a2-92c87b80f174",
+		"to": "0xdc71b72db51e227e65a45004ab2798d31e8934c9", // Wobbl3 Protocol contract address
+		"alias": null,
+		"secretType": "ETHEREUM",
+		"functionName": "mint",
+		"value": 100000000000,
+		"inputs": [{
+			"type": "address",
+			"value": "0x80cbb6c4342948e5be81987dce8251dbedd69138"
+		}, {
+			"type": "uint256",
+			"value": 73680000
+        }, {
+            "type": "address",
+            "value": "0x383fb35C0fEa02EA80a20F214861Cd20685f32C4" // Referrer wallet address
+		}],
+		"chainSpecificFields": {
+			"gasLimit": "300000"
+		}
+	}
+}
+```
+
+## Step 3: Test the implementation
+
+That's it! You can now test the implementation by clicking the link with the referrer wallet address in the URL and completing a transaction in-game. The referrer wallet payment should be displayed in the on-chain transaction. Please reach out once you've got to this stage and we'll gladly help you test the integration.
