@@ -6,14 +6,11 @@ import SelectChain from '../../components/inputs/SelectChain'
 import InputURL from '../../components/inputs/InputURL'
 import TextareaIframeCode from '../../components/inputs/TextareaIframeCode'
 import IframeSample from '../../components/IframeSample'
+import InputSelectPayoutCurrency from '../../components/inputs/InputSelectPayoutCurrency'
 
 # Quick start
 
 This guide will help you start using the Wobbl3 ERC20 affiliate protocol in your project. The affiliate protocol enables your community to earn rewards for referring new users to your project. 
-
-<Callout type="error" emoji="️❗️">
-    Requirements: an ERC20 token with a liquidity pool on [Uniswap](https://app.uniswap.org/#/pools) V3.
-</Callout>
 
 ## 1. Enter your payout wallet address
 
@@ -35,11 +32,20 @@ This is the token that will appear as the default selection when people go to bu
 
 <SelectChain />
 
-## 4. Share your referral link/code
+## 4. Choose your payout currency
+
+Choose whether you'd like to receive your referral earnings in the same token as the one you're referring, or in native currency (ETH or MATIC).
+
+<InputSelectPayoutCurrency />
+
+## 5. Share your referral link/code
 
 Click below to copy your referral link to your clipboard. You can also embed the iframe code on your website/blog.
 
+Your referral link:
 <InputURL />
+
+Your referral embed code:
 <TextareaIframeCode />
 <IframeSample />
 

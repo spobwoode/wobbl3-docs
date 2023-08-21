@@ -8,6 +8,8 @@ type ERC20QuickStartContextType = {
     chainName: string,
     setChainName: (chainName: string) => void,
     url: string,
+    payoutCurrency: string,
+    setPayoutCurrency: (payoutCurrency: string) => void,
 };
 
 const ERC20QuickStartContext = React.createContext<ERC20QuickStartContextType>({
@@ -18,6 +20,8 @@ const ERC20QuickStartContext = React.createContext<ERC20QuickStartContextType>({
     chainName: "",
     setChainName: () => {},
     url: "",
+    payoutCurrency: "inputToken",
+    setPayoutCurrency: () => {},
 })
 
 export function ERC20QuickStartProvider({ children }) {
@@ -25,11 +29,12 @@ export function ERC20QuickStartProvider({ children }) {
     const [referrerWalletAddress, setReferrerWalletAddress] = useState("0x383fb35C0fEa02EA80a20F214861Cd20685f32C4") // defaults to charity referrer address
     const [chainName, setChainName] = useState("ethereum")
     const [url, setUrl] = useState("https://app.wobbl3.io")
+    const [payoutCurrency, setPayoutCurrency] = useState("inputToken")
 
     React.useEffect(() => {
-        setUrl(`https://app.wobbl3.io/${tokenContractAddress}?r=${referrerWalletAddress}&chain=${chainName}`)
+        setUrl(`https://app.wobbl3.io/${tokenContractAddress}?r=${referrerWalletAddress}&chain=${chainName}&payoutCurrency=${payoutCurrency}`)
         //setUrl(`http://localhost:3001/${tokenContractAddress}?r=${referrerWalletAddress}&chain=${chainName}`)
-    }, [chainName, referrerWalletAddress, tokenContractAddress])
+    }, [chainName, referrerWalletAddress, tokenContractAddress, payoutCurrency])
 
     return (
         <ERC20QuickStartContext.Provider
@@ -41,6 +46,8 @@ export function ERC20QuickStartProvider({ children }) {
                 chainName,
                 setChainName,
                 url,
+                payoutCurrency,
+                setPayoutCurrency,
             }}
         >
             {children}
