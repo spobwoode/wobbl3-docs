@@ -20,6 +20,7 @@ export default function SelectChain() {
         >
             <option value="ethereum">Ethereum</option>
             <option value="polygon">Polygon</option>
+            <option value="bsc">Binance Smart Chain</option>
         </select>
     )
 }

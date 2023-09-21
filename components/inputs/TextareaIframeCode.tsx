@@ -8,7 +8,7 @@ export default function TextareaIframeCode() {
         <textarea
             name="iframeCode"
             id="iframeCode"
-            value={`<iframe src="${url}" width="100%" height="100%" frameborder="0"></iframe>`}
+            value={`<iframe src="${url}" width="100%" height="100%" frameborder="0" allow="clipboard-write; clipboard-read"></iframe>`}
             readOnly
             style={{
                 width: '100%',

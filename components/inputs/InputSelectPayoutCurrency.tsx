@@ -23,7 +23,7 @@ export default function InputSelectPayoutCurrency() {
                 borderRadius: '5px',
             }}
         >
-            <option value="inputToken">Native Token (ETH or MATIC)</option>
+            <option value="inputToken">Native Token</option>
             <option value="outputToken">Output Token</option>
         </select>
     )
