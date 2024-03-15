@@ -1,0 +1,35 @@
+# ThirdWeb NFT Contract Quick Start Guide
+
+This guide will help you to get started with the Wobbl3 'Share-2-Earn' protocol on an existing ThirdWeb NFT smart contract. The Share-2-Earn protocol allows your community to earn rewards by sharing their referral links with others. When a user mints an NFT using a referral link, the referrer will receive a percentage of the mint price as a reward.
+
+## Prerequisites
+
+- A ThirdWeb 'NFT Drop' smart contract deployed on an EVM-compatible blockchain (e.g. Ethereum, Binance Smart Chain, etc.)
+
+## Step 1: Add an allowlist entry for the Wobbl3 Share-2-Earn Protocol contract
+
+1. Under the 'Claim Conditions' tab, edit your claimer snapshot to include the Wobbl3 Share-2-Earn Protocol contract address on the relevant chain. You will need to be using a 'Public (With Allowlist)' or 'Allowlist Only' claimer snapshot.
+2. We recommend granting the protocol contract a discounted price. This will incentivize users to claim using referral links and offset the cost of the referrer's reward. A 10-20% discount is recommended but a higher discount may be used if desired.
+3. Save the changes.
+
+## Step 2: Visit the Mintboss mint page
+
+Mintboss is a tool that allows your community to generate referral links and mint using the Wobbl3 Share-2-Earn Protocol. For Thirdweb contract, Mintboss URLs follow the following format:
+
+```
+https://mintboss.xyz/tr/<nft_contract_address>&chain=<chain_name>
+```
+
+For example, if your NFT contract address is `0x1234567890abcdef1234567890abcdef123456789` and you are deploying on the Ethereum mainnet, the URL would be:
+
+```
+https://mintboss.xyz/tr/0x1234567890abcdef1234567890abcdef123456789&chain=ethereum
+```
+
+## Step 3: Start generating referral links
+
+Click on the 'Share 2 Earn' link below the mint button to generate your first referral link. You can choose the referral reward percentage and enter any address to generate a referral link. You can also use the 'Copy Link' button to copy the link to your clipboard.
+
+## Questions?
+
+Please don't hesitate to get in touch with us if you have any questions or need help with the integration. We're here to help! Feel free to DM us on Twitter at [@Wobbl3_Official](https://twitter.com/Wobbl3_Official).
