@@ -1,5 +1,11 @@
 import { Callout } from 'nextra/components'
 
+export function VideoIframe({ children }) {
+  return (
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xjzvgF4NpVU?si=pjKxoTmg0HjEWGxP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  )
+}
+
 # ThirdWeb NFT Contract Quick Start Guide
 
 <Callout type="warning" emoji="⚠️">
@@ -10,7 +16,7 @@ This guide will help you to get started with the Wobbl3 'Share-2-Earn' protocol 
 
 If you'd prefer to follow a video guide, you can watch the following video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xjzvgF4NpVU?si=pjKxoTmg0HjEWGxP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<VideoIframe />
 [![Watch the video](How to Create a Free NFT Referral System)](https://youtu.be/xjzvgF4NpVU)
 
 ## Prerequisites
